@@ -1,0 +1,50 @@
+//push pop peek display
+#include<stdio.h>
+int ch,i,data,stk[10],top=-1,n;
+void push()
+{
+    
+    
+    if(top>=n-1)
+        printf("stck full\n");
+    else{
+        printf("enter data\n");
+    scanf("%d",&data);
+        stk[++top]=data;
+
+    }
+    
+}
+void pop()
+{
+    if(top==-1)
+        printf("stck empty\n");
+    else{
+        int d=stk[top];
+        top--;
+            }
+
+}
+void display()
+{
+    for(i=top;i>-1;i--)
+    printf("%d\t",stk[i]);
+}
+void peek()
+{
+    if(top==-1)
+    printf("stk empty\n");
+    else
+    printf("top is %d",stk[top]);
+}
+void main()
+{
+    printf("enter stack size\n");
+    scanf("%d",&n);
+    push();
+   
+    peek();
+    pop();
+
+    display();
+}
